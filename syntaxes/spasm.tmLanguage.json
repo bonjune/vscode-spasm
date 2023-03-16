@@ -1,0 +1,76 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Spasm",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#symbols"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.def",
+					"match": "\\b(syntax|def|var|rule|relation)\\b"
+				},
+				{
+					"name": "keyword.grammar",
+					"match": "(\\|\\-|\\|)"
+				},
+				{
+					"name": "keyword.math",
+					"match": "\\b(~\\>|\\|-)\\b"
+				},
+				{
+					"name": "keyword.control.less",
+					"match": "\\b(hint)\\b"
+				}
+			]
+		},
+		"symbols": {
+			"patterns": [
+				{
+					"name": "variable.parameter",
+					"match": "\\b[a-z][_a-z0-9]*\\b"
+				},
+				{
+					"name": "variable",
+					"match": "\\b[A-Z][._A-Z0-9]*\\b"
+				},
+				{
+					"name": "variable",
+					"match": "\\b[A-Z][_a-z]*\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.spasm",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.spasm",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment",
+					"match": ";;.*$"
+				}
+			]
+		}
+	},
+	"scopeName": "source.spasm"
+}

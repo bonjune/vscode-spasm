@@ -1,0 +1,25 @@
+{
+  "name": "spasm",
+  "displayName": "Spasm Lang",
+  "description": "Syntax Highlighting for spasm",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "spasm",
+      "aliases": ["Spasm", "spasm"],
+      "extensions": [".spasm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "spasm",
+      "scopeName": "source.spasm",
+      "path": "./syntaxes/spasm.tmLanguage.json"
+    }]
+  }
+}
