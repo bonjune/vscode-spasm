@@ -24,7 +24,7 @@
 				},
 				{
 					"name": "keyword.grammar",
-					"match": "(\\|\\-|\\|)"
+					"match": "(\\|\\-|\\||\\-\\>|\\-\\-)"
 				},
 				{
 					"name": "keyword.math",
